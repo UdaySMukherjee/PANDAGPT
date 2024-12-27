@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2B2D31"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ChatScreenFragment">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ChatRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:paddingTop="?actionBarSize"
+        android:layout_above="@+id/rlSend"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <RelativeLayout
+        android:id="@+id/rlSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="4dp"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/edMessage"
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="9dp"
+            android:layout_toStartOf="@id/sendImageBtn"
+            android:background="@drawable/bg_edittext"
+            android:hint="Message"
+            android:inputType="textMultiLine"
+            android:maxHeight="50dp"
+            android:maxLines="5"
+            android:paddingHorizontal="7dp"
+            android:paddingVertical="15dp"
+            android:scrollbars="vertical"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/sendImageBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_send_btn"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_send" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

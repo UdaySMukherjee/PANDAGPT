@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EasyChatGPT" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/ubuntu_mono_regular</item>
+        <item name="android:statusBarColor">@color/black</item>
+    </style>
+
+    <style name="Theme.EasyChatGPT" parent="Base.Theme.EasyChatGPT"/>
+
+    <style name="MySplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/panda_icon</item>
+        <item name="windowSplashScreenBackground">#fff</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <item name="postSplashScreenTheme">@style/Theme.EasyChatGPT</item>
+    </style>
+
+</resources>

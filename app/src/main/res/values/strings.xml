@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Easy ChatGPT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dr_panda">Dr. PANDA</string>
+    <string name="you_are_user_in_the_chat">You are \'USER\' in the chat</string>
+    <string name="panda">PANDA</string>
+</resources>

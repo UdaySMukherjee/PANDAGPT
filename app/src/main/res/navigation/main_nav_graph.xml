@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/welcomeScreenFragment">
+
+
+    <fragment
+        android:id="@+id/welcomeScreenFragment"
+        android:name="com.example.easychatgpt.fragments.WelcomeScreenFragment"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_robotListScreenFragment"
+            app:destination="@id/robotListScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/robotListScreenFragment"
+        android:name="com.example.easychatgpt.fragments.RobotListScreenFragment"
+        android:label="fragment_robotlist_screen"
+        tools:layout="@layout/fragment_robotlist_screen" >
+        <action
+            android:id="@+id/action_robotListScreenFragment_to_chatScreenFragment"
+            app:destination="@id/chatScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_robotListScreenFragment_to_reminderScreenFragment"
+            app:destination="@id/reminderScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_robotListScreenFragment_to_helplineScreenFragment"
+            app:destination="@id/helplineScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/chatScreenFragment"
+        android:name="com.example.easychatgpt.fragments.ChatScreenFragment"
+        android:label="fragment_chat_screen"
+        tools:layout="@layout/fragment_chat_screen"
+        >
+        <action
+            android:id="@+id/action_chatScreenFragment_to_selectTextScreenFragment"
+            app:destination="@id/selectTextScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_chatScreenFragment_to_robotListScreenFragment"
+            app:destination="@id/robotListScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_chatScreenFragment_to_helplineScreenFragment"
+            app:destination="@id/helplineScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/selectTextScreenFragment"
+        android:name="com.example.easychatgpt.fragments.SelectTextScreenFragment"
+        android:label="fragment_select_text_screen"
+        tools:layout="@layout/fragment_select_text_screen" >
+        <argument
+            android:name="selectedMessage"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/helplineScreenFragment"
+        android:name="com.example.easychatgpt.fragments.HelplineScreenFragment"
+        android:label="HelplineScreenFragment" >
+        <action
+            android:id="@+id/action_helplineScreenFragment_to_helppageScreenFragment"
+            app:destination="@id/helppageScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_helplineScreenFragment_to_chatScreenFragment"
+            app:destination="@id/chatScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_helplineScreenFragment_to_robotListScreenFragment"
+            app:destination="@id/robotListScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reminderScreenFragment"
+        android:name="com.example.easychatgpt.fragments.ReminderScreenFragment"
+        android:label="ReminderScreenFragment" >
+        <action
+            android:id="@+id/action_reminderScreenFragment_to_robotListScreenFragment"
+            app:destination="@id/robotListScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/helppageScreenFragment"
+        android:name="com.example.easychatgpt.fragments.HelppageScreenFragment"
+        android:label="HelppageScreenFragment" >
+        <action
+            android:id="@+id/action_helppageScreenFragment_to_robotListScreenFragment"
+            app:destination="@id/robotListScreenFragment" />
+    </fragment>
+</navigation>
