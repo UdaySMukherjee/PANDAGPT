@@ -1,51 +1,37 @@
-# EasyChatGPT - AI-Powered Chat App
-Welcome to EasyChatGPT - your AI-powered chat application! This app demonstrates real-time conversations with the OpenAI GPT-3 model using the OkHttp library for API calls. Below, we provide an overview of key files and features:
-![Untitled design](https://user-images.githubusercontent.com/60041910/218378637-adf9bcbf-5c7e-4274-8491-1ebe2a28b396.gif)
+# PANDAGPT-Application
 
+PANDAGPT is an AI-powered chat application integrated with OpenAI's GPT-3, offering real-time conversations through a simple and intuitive interface. The app uses OkHttp for API calls to OpenAI, allowing for seamless communication.
 
 ## Key Features
+- Real-time GPT-3 interactions.
+- User-friendly interface for easy chat.
+- Chat history view for previous messages.
+- OpenAI API integration for dynamic text responses.
 
-- **Real-time Conversations:** Engage in dynamic conversations with the OpenAI GPT-3 model.
-- **User-friendly Interface:** Simple and intuitive user interface for seamless chatting.
-- **Message History:** Display a history of sent and received messages.
-- **OpenAI Integration:** Utilize the power of the OpenAI API for text completion.
-
-## Usage
-
-1. Clone or download the repository to your local machine.
+## Setup & Usage
+1. Clone or download the repository.
 2. Open the project in Android Studio.
-3. Replace `YOUR_API_KEY` in `callAPI()` with your OpenAI API key.
-4. Build and run the app on your Android device or emulator.
+3. Replace `YOUR_API_KEY` in the `callAPI()` method with your OpenAI API key.
+4. Build and run the application on your Android device or emulator.
 
 ## File Structure
-
-- `MainActivity.java`: The main activity managing chat functionality and API calls.
-- `Message.java`: Data model for individual chat messages.
-- `MessageAdapter.java`: RecyclerView adapter for displaying messages.
-- `activity_main.xml`: Layout XML file for the main chat activity.
+- **MainActivity.java**: Handles chat functionality and API calls.
+- **Message.java**: Data model for chat messages.
+- **MessageAdapter.java**: RecyclerView adapter for displaying messages.
+- **activity_main.xml**: Layout for the main activity.
 
 ## How It Works
+1. User sends a message.
+2. The app sends the message to OpenAI GPT-3 via an API call.
+3. GPT-3’s response is displayed along with the user's message.
 
-1. User inputs a message and taps the send button.
-2. The message is added to the chat history as "Sent by Me".
-3. The app calls the OpenAI API with the user's message.
-4. The API response (bot's reply) is added to the chat history as "Sent by Bot".
-
-## Important Note
-
-Ensure you have obtained your OpenAI API key and added it to the `Authorization` header in the `callAPI()` function.
+## Requirements
+- Obtain an OpenAI API key.
+- Replace the key in the `callAPI()` function.
 
 ## Disclaimer
-
-Please be cautious while integrating API keys and sensitive information in your code. This repository is for educational purposes and to showcase integration with the OpenAI API.
+This project is for educational use. Ensure proper handling of API keys and sensitive data.
 
 ## Resources
-
-- [OpenAI API Documentation](https://beta.openai.com/docs/)
+- [OpenAI API Documentation](https://beta.openai.com)
 - [OkHttp Library](https://square.github.io/okhttp/)
-
-Feel free to explore, experiment, and contribute to this project. Happy coding!
-
----
-
-*Disclaimer: This repository is for educational purposes and does not provide guarantees or warranties for any purpose. It is recommended to follow best practices for securing API keys and sensitive information.*
